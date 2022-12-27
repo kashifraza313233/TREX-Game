@@ -63,6 +63,16 @@ namespace TREX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dead {
+            get {
+                object obj = ResourceManager.GetObject("dead", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap obstacle_1 {
             get {
                 object obj = ResourceManager.GetObject("obstacle-1", resourceCulture);
@@ -83,9 +93,9 @@ namespace TREX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap runnerdino {
+        internal static System.Drawing.Bitmap running {
             get {
-                object obj = ResourceManager.GetObject("runnerdino", resourceCulture);
+                object obj = ResourceManager.GetObject("running", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

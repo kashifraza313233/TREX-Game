@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9C4EAE1C-08CC-4784-889A-37830B6B028A}</ProjectGuid>
+    <ProjectGuid>{F134CA02-57BE-44F0-8680-D4511E9725CA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TREX</RootNamespace>
     <AssemblyName>TREX</AssemblyName>
@@ -81,13 +81,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\runnerdino.gif" />
+    <None Include="Resources\dead.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\obstacle-1.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\obstacle-2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\running.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

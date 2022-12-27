@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TREX
 {
-    public partial class Form1 : System.Windows.Forms.Form
+    public partial class Form1 : Form
     {
         bool jump = false; // bool is used to check dino is jumping 
         int score = 0; //default score is 0
@@ -26,6 +26,26 @@ namespace TREX
             GameRestart();
         }
 
+        private void keydown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space && jump == false)
+            {
+                jump = true;
+            }
+        }
+
+        private void keyup(object sender, KeyEventArgs e)
+        {
+            if (jump == true)
+            {
+                jump = false;
+            }
+            if (e.KeyCode == Keys.R && GameOver == true)
+            {
+                GameRestart();
+            }
+        }
+
         private void GameTimerEvent(object sender, EventArgs e)
         {
             trex.Top += jumpspeed;
@@ -34,7 +54,7 @@ namespace TREX
             {
                 jump = false;
             }
-            if(jump==true)
+            if (jump == true)
             {
                 jumpspeed = -12;
                 force -= 1;
@@ -44,10 +64,10 @@ namespace TREX
             {
                 jumpspeed = 12;
             }
-            if(trex.Top>234 && jump==false)
+            if (trex.Top > 414 && jump == false)
             {
                 force = 12;
-                trex.Top = 235;
+                trex.Top = 415;
                 jumpspeed = 0;
 
             }
@@ -60,9 +80,9 @@ namespace TREX
             score = 0;
             barrierspeed = 10;
             Scoretext.Text = "Score: " + score;
-            trex.Image = Properties.Resources.runnerdino;
+            trex.Image = Properties.Resources.running;
             GameOver = false;
-            trex.Top = 235;
+            trex.Top = 415;
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "Barriers")
@@ -74,24 +94,5 @@ namespace TREX
             GameEvent.Start();
         }
 
-        private void Keydown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Space && jump == false)
-            {
-                jump = true;
-            }
-        }
-
-        private void Keyup(object sender, KeyEventArgs e)
-        {
-            if (jump == true)
-            {
-                jump = false;
-            }
-            if (e.KeyCode == Keys.R && GameOver == true)
-            {
-                GameRestart();
-            }
-        }
     }
 }
