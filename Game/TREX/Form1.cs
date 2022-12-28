@@ -38,10 +38,13 @@ namespace TREX
 
         private void keyup(object sender, KeyEventArgs e)
         {
+            //if jump bool is true after thah jump will be false when player release space button
             if (jump == true)
             {
                 jump = false;
             }
+            // Here when player touch the hardles game will over and by pressing space button
+            // player can restart the game 
             if (e.KeyCode == Keys.Space && GameOver == true)
             {
                 GameRestart();
@@ -78,7 +81,6 @@ namespace TREX
                 
                 if (x is PictureBox && (string)x.Tag =="Barriers")
                 {
-                    GameEvent.Stop();
                     x.Left -= barrierspeed;
                     if (x.Left < -100)
                     {
@@ -87,12 +89,13 @@ namespace TREX
                     }
                     if (trex.Bounds.IntersectsWith(x.Bounds))
                     {
+                        //when runner touch hardles game will stop and player will dead
                         GameEvent.Stop();
                         trex.Image = Properties.Resources.dead;
-                        Scoretext.Text+= "";
-                        Hiscoretext.Text = "High Score="+score;
+                        Scoretext.Text+= "";    // Here Score will show 
+                        Hiscoretext.Text = "High Score="+score; // here High Score of the player will show 
                         MessageBox.Show("Press Space To Restart the Game!");
-                        GameOver = true;
+                        GameOver = true;// when player press space button Game will restart 
 
                     }
                 }
