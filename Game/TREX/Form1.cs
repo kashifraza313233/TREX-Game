@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TREX
 {
-    public partial class Form1 : Form
+    public partial class TRexForm1 : Form
     {
         bool jump = false; // bool is used to check dino is jumping 
         int score = 0; //default score is 0
@@ -20,7 +20,7 @@ namespace TREX
         int position;
         bool GameOver = false;
         Random random = new Random();
-        public Form1()
+        public TRexForm1()
         {
             InitializeComponent();
             GameRestart();
@@ -43,9 +43,9 @@ namespace TREX
             {
                 jump = false;
             }
-            // Here when player touch the hardles game will over and by pressing space button
+            // Here when player touch the hardles game will over and by pressing Enter button
             // player can restart the game 
-            if (e.KeyCode == Keys.Space && GameOver == true)
+            if (e.KeyCode == Keys.Enter && GameOver == true)
             {
                 GameRestart();
             }
@@ -94,7 +94,7 @@ namespace TREX
                         trex.Image = Properties.Resources.dead;
                         Scoretext.Text+= "";    // Here Score will show 
                         Hiscoretext.Text = "High Score="+score; // here High Score of the player will show 
-                        MessageBox.Show("Press Space To Restart the Game!");
+                        MessageBox.Show("Press Enter To Restart the Game!");
                         GameOver = true;// when player press space button Game will restart 
 
                     }

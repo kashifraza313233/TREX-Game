@@ -1,6 +1,6 @@
 ﻿namespace TREX
 {
-    partial class Form1
+    partial class TRexForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Scoretext = new System.Windows.Forms.Label();
             this.GameEvent = new System.Windows.Forms.Timer(this.components);
+            this.Hiscoretext = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.trex = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Hiscoretext = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -51,7 +51,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(345, 9);
+            this.label1.Location = new System.Drawing.Point(329, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 33);
             this.label1.TabIndex = 0;
@@ -72,12 +72,23 @@
             this.GameEvent.Interval = 20;
             this.GameEvent.Tick += new System.EventHandler(this.GameTimerEvent);
             // 
+            // Hiscoretext
+            // 
+            this.Hiscoretext.AutoSize = true;
+            this.Hiscoretext.BackColor = System.Drawing.Color.LightGreen;
+            this.Hiscoretext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hiscoretext.Location = new System.Drawing.Point(324, 59);
+            this.Hiscoretext.Name = "Hiscoretext";
+            this.Hiscoretext.Size = new System.Drawing.Size(109, 25);
+            this.Hiscoretext.TabIndex = 9;
+            this.Hiscoretext.Text = "Hi Score:";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::TREX.Properties.Resources.obstacle3;
             this.pictureBox2.Location = new System.Drawing.Point(617, 399);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 61);
+            this.pictureBox2.Size = new System.Drawing.Size(59, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -125,18 +136,7 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Hiscoretext
-            // 
-            this.Hiscoretext.AutoSize = true;
-            this.Hiscoretext.BackColor = System.Drawing.Color.LightGreen;
-            this.Hiscoretext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hiscoretext.Location = new System.Drawing.Point(466, 54);
-            this.Hiscoretext.Name = "Hiscoretext";
-            this.Hiscoretext.Size = new System.Drawing.Size(109, 25);
-            this.Hiscoretext.TabIndex = 9;
-            this.Hiscoretext.Text = "Hi Score:";
-            // 
-            // Form1
+            // TRexForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,7 +149,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Scoretext);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "TRexForm1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TREX";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keydown);
