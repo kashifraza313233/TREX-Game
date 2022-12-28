@@ -16,8 +16,11 @@ namespace TREX
         {
             InitializeComponent();
         }
+
         public void loadform(object Form)
         {
+            /// On button click all form which relate to button functionality will appear in mainpanel
+            /// Main form will remain show 
             if(this.mainpanel.Controls.Count > 0)
             {
                 this.mainpanel.Controls.RemoveAt(0);
@@ -30,7 +33,7 @@ namespace TREX
             frm.Show();
 
         }
-
+        /// On click play next form will show and game will start 
         private void Play_Click(object sender, EventArgs e)
         {
             Form2 f2 =new Form2();
@@ -38,7 +41,7 @@ namespace TREX
             TRexForm1 f1 = new TRexForm1();
             f1.Show();
         }
-
+        /// For Exit application
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
