@@ -45,10 +45,15 @@ namespace TREX
         {
             Application.Exit();
         }
-
+        /// Onclick about button About form will show in selected Panel 
         private void About_Click(object sender, EventArgs e)
         {
             loadform(new About());
+        }
+        //// Onclick History Button History form will show 
+        private void History_Click(object sender, EventArgs e)
+        {
+            loadform(new History());
         }
     }
 }

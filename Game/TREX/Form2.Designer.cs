@@ -49,6 +49,7 @@
             this.MainHeading.AutoSize = true;
             this.MainHeading.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MainHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainHeading.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.MainHeading.Location = new System.Drawing.Point(332, 5);
             this.MainHeading.Name = "MainHeading";
             this.MainHeading.Size = new System.Drawing.Size(172, 57);
@@ -72,7 +73,7 @@
             this.Play.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Play.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Play.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Play.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Play.Location = new System.Drawing.Point(1, 57);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(123, 41);
@@ -98,9 +99,9 @@
             // 
             this.mainpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(0, 67);
+            this.mainpanel.Location = new System.Drawing.Point(129, 67);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(886, 484);
+            this.mainpanel.Size = new System.Drawing.Size(757, 484);
             this.mainpanel.TabIndex = 2;
             // 
             // About
@@ -108,7 +109,7 @@
             this.About.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.About.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.About.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.About.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.About.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.About.Location = new System.Drawing.Point(1, 126);
             this.About.Name = "About";
             this.About.Size = new System.Drawing.Size(123, 41);
@@ -133,20 +134,21 @@
             this.History.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.History.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.History.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.History.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.History.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.History.Location = new System.Drawing.Point(1, 195);
             this.History.Name = "History";
             this.History.Size = new System.Drawing.Size(123, 41);
             this.History.TabIndex = 2;
             this.History.Text = "History";
             this.History.UseVisualStyleBackColor = false;
+            this.History.Click += new System.EventHandler(this.History_Click);
             // 
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Exit.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Exit.Location = new System.Drawing.Point(1, 257);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(123, 41);
@@ -160,8 +162,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 551);
-            this.Controls.Add(this.Insidepanel);
             this.Controls.Add(this.mainpanel);
+            this.Controls.Add(this.Insidepanel);
             this.Controls.Add(this.Headerpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";

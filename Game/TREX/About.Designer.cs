@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.headerpanel1 = new System.Windows.Forms.Panel();
             this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,8 +43,8 @@
             this.Aboutlabel1.AutoSize = true;
             this.Aboutlabel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Aboutlabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aboutlabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Aboutlabel1.Location = new System.Drawing.Point(353, 9);
+            this.Aboutlabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Aboutlabel1.Location = new System.Drawing.Point(353, 3);
             this.Aboutlabel1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.Aboutlabel1.Name = "Aboutlabel1";
             this.Aboutlabel1.Size = new System.Drawing.Size(107, 37);
@@ -107,6 +108,16 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "4) Press History Button To check the History of Previous Players Score";
             // 
+            // headerpanel1
+            // 
+            this.headerpanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.headerpanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerpanel1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.headerpanel1.Location = new System.Drawing.Point(0, 0);
+            this.headerpanel1.Name = "headerpanel1";
+            this.headerpanel1.Size = new System.Drawing.Size(742, 41);
+            this.headerpanel1.TabIndex = 3;
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 33F);
@@ -114,6 +125,7 @@
             this.ClientSize = new System.Drawing.Size(742, 489);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.Aboutlabel1);
+            this.Controls.Add(this.headerpanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
@@ -135,5 +147,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel headerpanel1;
     }
 }

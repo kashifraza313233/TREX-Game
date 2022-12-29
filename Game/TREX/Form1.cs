@@ -92,9 +92,9 @@ namespace TREX
                         //when runner touch hardles game will stop and player will dead
                         GameEvent.Stop();
                         trex.Image = Properties.Resources.dead;
-                        Scoretext.Text+= "";    // Here Score will show 
+                        Scoretext.Text+= ""+ "\n Game Over \nPress Enter To Restart!";    // Here Score will show 
                         Hiscoretext.Text = "High Score="+score; // here High Score of the player will show 
-                        MessageBox.Show("Press Enter To Restart the Game!");
+                        
                         GameOver = true;// when player press space button Game will restart 
 
                     }
