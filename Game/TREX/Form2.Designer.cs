@@ -115,6 +115,7 @@
             this.About.TabIndex = 1;
             this.About.Text = "About";
             this.About.UseVisualStyleBackColor = false;
+            this.About.Click += new System.EventHandler(this.About_Click);
             // 
             // pictureBox1
             // 

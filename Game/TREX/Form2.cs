@@ -36,8 +36,7 @@ namespace TREX
         /// On click play next form will show and game will start 
         private void Play_Click(object sender, EventArgs e)
         {
-            Form2 f2 =new Form2();
-            f2.Hide();
+            this.Hide();
             TRexForm1 f1 = new TRexForm1();
             f1.Show();
         }
@@ -45,6 +44,11 @@ namespace TREX
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void About_Click(object sender, EventArgs e)
+        {
+            loadform(new About());
         }
     }
 }

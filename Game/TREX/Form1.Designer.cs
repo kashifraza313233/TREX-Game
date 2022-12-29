@@ -38,11 +38,14 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.trex = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Headerpanel1 = new System.Windows.Forms.Panel();
+            this.Exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trex)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Headerpanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +54,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 9);
+            this.label1.Location = new System.Drawing.Point(342, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 33);
             this.label1.TabIndex = 0;
@@ -61,7 +64,7 @@
             // 
             this.Scoretext.AutoSize = true;
             this.Scoretext.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Scoretext.Location = new System.Drawing.Point(323, 100);
+            this.Scoretext.Location = new System.Drawing.Point(134, 81);
             this.Scoretext.Name = "Scoretext";
             this.Scoretext.Size = new System.Drawing.Size(123, 31);
             this.Scoretext.TabIndex = 1;
@@ -77,7 +80,7 @@
             this.Hiscoretext.AutoSize = true;
             this.Hiscoretext.BackColor = System.Drawing.Color.LightGreen;
             this.Hiscoretext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hiscoretext.Location = new System.Drawing.Point(324, 59);
+            this.Hiscoretext.Location = new System.Drawing.Point(466, 87);
             this.Hiscoretext.Name = "Hiscoretext";
             this.Hiscoretext.Size = new System.Drawing.Size(109, 25);
             this.Hiscoretext.TabIndex = 9;
@@ -86,7 +89,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::TREX.Properties.Resources.obstacle3;
-            this.pictureBox2.Location = new System.Drawing.Point(617, 399);
+            this.pictureBox2.Location = new System.Drawing.Point(617, 403);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(59, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +100,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::TREX.Properties.Resources.obstacle_2;
-            this.pictureBox4.Location = new System.Drawing.Point(471, 416);
+            this.pictureBox4.Location = new System.Drawing.Point(471, 418);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(43, 44);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -108,7 +111,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::TREX.Properties.Resources.obstacle_1;
-            this.pictureBox5.Location = new System.Drawing.Point(311, 413);
+            this.pictureBox5.Location = new System.Drawing.Point(311, 415);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(22, 46);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -136,19 +139,42 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // Headerpanel1
+            // 
+            this.Headerpanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Headerpanel1.Controls.Add(this.Exit);
+            this.Headerpanel1.Controls.Add(this.label1);
+            this.Headerpanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Headerpanel1.Location = new System.Drawing.Point(0, 0);
+            this.Headerpanel1.Name = "Headerpanel1";
+            this.Headerpanel1.Size = new System.Drawing.Size(801, 36);
+            this.Headerpanel1.TabIndex = 10;
+            // 
+            // Exit
+            // 
+            this.Exit.AutoSize = true;
+            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Exit.Location = new System.Drawing.Point(769, 5);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(27, 25);
+            this.Exit.TabIndex = 1;
+            this.Exit.Text = "X";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // TRexForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 510);
+            this.Controls.Add(this.Headerpanel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Hiscoretext);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.trex);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Scoretext);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TRexForm1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -161,6 +187,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trex)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Headerpanel1.ResumeLayout(false);
+            this.Headerpanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +205,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Hiscoretext;
+        private System.Windows.Forms.Panel Headerpanel1;
+        private System.Windows.Forms.Label Exit;
     }
 }
 
